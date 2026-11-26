@@ -143,6 +143,19 @@ preferred_venue,
 catering_preference,
 special_request
 )
+VALUES
+(
+'$fullName',
+'$email',
+'$contact',
+'$eventType',
+'$eventDate',
+'$eventTime',
+'$guests',
+'$venue'
+'$catering'
+'$specialRequest'
+)";
 
 
 
