@@ -118,17 +118,31 @@ if($eventType == "Wedding Celebration"){
 
 if($guests < $minGuests || $guests > $maxGuests){
 
-    echo "<div class='error-box'>
+    echo 
+        <div class='error-box'>
         <h3>Reservation Failed</h3>
         <p>
-            $eventType requires a minimum of $minGuests
-            and a maximum of $maxGuests guests.
+            $eventType requires a minimum of $minGuests and a maximum of $maxGuests guests.
         </p>
-    </div>
-    ";
+      </div>
+            ";
 
     exit;
 }
+
+$sql = "INSERT INTO event_reservation
+(
+full_name,
+email_address,
+contact_number,
+event_type,
+event_date,
+event_time,
+number_of_guests,
+preferred_venue,
+catering_preference,
+special_request
+)
 
 
 
