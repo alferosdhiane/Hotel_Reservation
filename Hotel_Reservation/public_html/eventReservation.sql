@@ -11,3 +11,4 @@ CREATE TABLE event_reservation (
   catering_preference VARCHAR(50) NOT NULL,
   special_request TEXT,
   eventReservation_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+);
