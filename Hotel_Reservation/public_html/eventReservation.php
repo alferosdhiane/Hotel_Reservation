@@ -157,6 +157,112 @@ VALUES
 '$specialRequest'
 )";
 
+mysqli_query($conn, $sql);
+echo "Receipt...";
+?>
+<div class="receipt">
+    <h1>DMN HOTEL</h1>
+    <h2>BOOKING RECEIPT</h2>
+    <hr>
+     <p><strong>Full Name:</strong>
+        <?php echo htmlspecialchars($fullName); ?>
+    </p>
+
+    <p><strong>Email Address:</strong>
+        <?php echo htmlspecialchars($email); ?>
+    </p>
+
+    <p><strong>Contact Number:</strong>
+        <?php echo htmlspecialchars($contact); ?>
+    </p>
+
+    <p><strong>Issued On:</strong>
+        <?php echo date("F d, Y h:i A"); ?>
+    </p>
+
+    <table>
+
+        <tr>
+            <td>Event Type</td>
+            <td class="alignright">
+                <?php echo htmlspecialchars($eventType); ?>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Event Date</td>
+            <td class="alignright">
+                <?php echo date("F d, Y", strtotime($eventDate)); ?>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Event Time</td>
+            <td class="alignright">
+                <?php echo date("h:i A", strtotime($eventTime)); ?>
+            </td>
+        </tr>
+        <tr>
+            <td>Number of Guests</td>
+            <td class="alignright">
+                <?php echo $guests; ?>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Guest Capacity</td>
+            <td class="alignright">
+                <?php echo $minGuests . " - " . $maxGuests; ?> Guests
+            </td>
+        </tr>
+
+        <tr>
+            <td>Preferred Venue</td>
+            <td class="alignright">
+                <?php echo htmlspecialchars($venue); ?>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Catering Preference</td>
+            <td class="alignright">
+                <?php echo htmlspecialchars($catering); ?>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Special Request</td>
+            <td class="alignright">
+                <?php
+                if(!empty($specialRequest)){
+                    echo nl2br(htmlspecialchars($specialRequest));
+                }
+                else{
+                    echo "None";
+                }
+                ?>
+            </td>
+        </tr>
+
+    </table>
+
+    <br>
+
+    <p><strong>Reservation Status:</strong> Pending Confirmation</p>
+    <p style="text-align:center; color:#80634b;">
+        Thank you for choosing DMN Hotel!
+    </p>
+
+</div>
+
+<button class="print-btn" onclick="window.print()">
+    Print Receipt
+</button>
+
+</body>
+</html>
+
+
 
 
 
