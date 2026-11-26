@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>DMN Hotel Receipt</title>
+<title>DMN Hotel Event Reservation Receipt</title>
 
 <style>
 
