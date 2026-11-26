@@ -12,7 +12,7 @@ CREATE TABLE event_reservation (
   
   event_date DATE NOT NULL,
   
-  event_time DATE NOT NULL,
+  event_time TIME NOT NULL,
   
   number_of_guests INT NOT NULL,
   
