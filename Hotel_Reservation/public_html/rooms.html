@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DMN Hotel - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Hotel Rooms</h1>
+</header>
+
+
+
+<nav>
+        
+    <div class="nav-item">
+        <a href="index.html">Home</a>
+        <div class="drawer">
+            Welcome to our hotel website.
+            
+        </div>
+    </div>
+
+    <div class="nav-item">
+        <a href="rooms.html">Rooms</a>
+    </div>
+
+    <div class="nav-item">
+        <a href="amenities.html">Amenities</a>
+        <div class="drawer">
+            <p>Check our pool, gym, and restaurant.</p>
+
+              <a href="swimming-pool.html">Swimming Pool</a>
+              <a href="fitness-center.html">Fitness Center</a>
+              <a href="restaurant.html">Restaurant & Bar</a>
+              <a href="spa-services.html">Spa Services</a>
+        </div>
+    </div>
+
+    <div class="nav-item">
+        <a href="contact.html">Contact</a>
+        <div class="drawer">
+            <p>Reach us anytime for inquiries.</p>
+
+              <a href="contact.html#about">About Us</a>
+              <a href="contact.html#form">Contact Form</a>
+              <a href="contact.html#location">Location & Directions</a>
+        </div>
+    </div>
+
+
+    <div class="nav-item">
+        <a href="events.html">Events</a>
+
+        <div class="drawer">
+            <p>Celebrate your special occasions with us.</p>
+
+              <a href="events.html#weddings">Wedding Events</a>
+              <a href="events.html#birthdays">Birthday Celebrations</a>
+              <a href="events.html#event-form">Event Reservation</a>
+        </div>
+    
+    </div>
+
+</nav>
+
+<section class="content">
+    <h2>Room Types</h2>
+<div class="rooms-del">
+    <a href="lux-room.html">
+        <img src="images/room1.jpg" alt="Luxury Room">
+    </a>
+    <p>Luxury Room - Spacious and elegant accommodation with premium amenities.</p>
+</div>
+
+<div class="rooms-std">
+    <a href="standard-rooms.html">
+        <img src="images/room2.jpg" alt="Standard Room">
+    </a>
+    <p>Standard Room - Comfortable and affordable for business or leisure travelers.</p>
+</div>
+
+<div class="rooms-fam">
+    <a href="family-suites.html">
+        <img src="images/room3.jpg" alt="Family Suite">
+    </a>
+    <p>Family Suite - Spacious suite ideal for families and large groups.</p>
+</div>
+
+
+    <h3>Room Rates</h3>
+
+    <table>
+        <tr>
+            <td>Luxury Room</td>
+            <td>₱5,999</td>
+            <td>2 Persons</td>
+        </tr>
+
+        <tr>
+            <td>Standard Room</td>
+            <td>₱2,499</td>
+            <td>2 Persons</td>
+        </tr>
+
+        <tr>
+            <td>Family Suite</td>
+            <td>₱7,499</td>
+            <td>4-6 Persons</td>
+        </tr>
+    </table>
+</section>
+
+<section class="policy-section">
+    <h3>Booking Policies</h3>
+
+    <ol class="policy-list">
+        <li>
+            <strong>No Walk-In Reservations</strong><br>
+            All bookings must be made online or via phone at least one day prior to the intended check-in date.
+        </li>
+
+        <li>
+            <strong>Advance Payment Policy</strong><br>
+            Reservations are confirmed only after the required full or partial payment has been received.
+        </li>
+
+        <li>
+            <strong>Cancellation and Refund Policy</strong><br>
+            Cancellations must be made at least 48 hours before the scheduled check-in date to avoid cancellation charges.
+        </li>
+
+        <li>
+            <strong>Maximum Occupancy Rule</strong><br>
+            Room occupancy must not exceed the stated room capacity. Additional guests require prior approval and may incur extra charges.
+        </li>
+
+        <li>
+            <strong>Check-In and Check-Out Policy</strong><br>
+            Standard check-in time is 2:00 PM and check-out time is 12:00 PM. Early check-in and late check-out are subject to availability and additional fees.
+        </li>
+    </ol>
+</section>
+
+
+ <form action="book.php" method="POST" class="booking-panel">
+    
+    <label for="room_type">Choose Room Type</label>
+
+    <select id="room_type" name="room_type" class="field" required>
+        <option value="standard">Standard Room</option>
+        <option value="luxury">Luxury Room</option>
+        <option value="family">Family Suite</option>
+    </select>
+    
+    <label for="guest_name">Guest Name</label>
+    <input type="text" id="guest_name" name="guest_name" class="field" required>
+
+    <label for="guest_email">Email Address</label>
+    <input type="email" id="guest_email" name="guest_email" class="field" required>
+
+    <label for="check_in">Check-in</label>
+    <input type="date" id="check_in" name="check_in" class="field" required>
+
+    <label for="check_out">Check-out</label>
+    <input type="date" id="check_out" name="check_out" class="field" required>
+
+    <label for="guests">Guests</label>
+    <input type="number" id="guests" name="guests" class="field" min="1" value="1" required>
+
+    <label for="message">Anything we should know? (optional)</label>
+    <textarea id="message" name="message" class="field" rows="4"></textarea>
+
+    <label class="policy-agreement">
+        <input type="checkbox" id="agree-policy" name="agree-policy" required>
+        I have read and agree to the hotel's booking policies.
+    </label>
+
+    <button type="submit" class="booking-btn">
+        Send Booking Request
+    </button>
+
+    <p class="booking-note">
+        This is a booking request, not an instant reservation.
+        We'll confirm by email.
+    </p>
+
+    <p id="form-status"></p>
+
+</form>
+
+  <footer>
+    <p>&copy; 2026 XYZ Hotel</p>
+</footer>
+
+<script>
+
+const form = document.querySelector(".booking-panel");
+
+form.addEventListener("submit", function(e){
+
+    let roomType = document.getElementById("room_type").value;
+    let guests = parseInt(document.getElementById("guests").value);
+
+    if ((roomType === "standard" || roomType === "luxury") && guests > 2) {
+
+        alert("Maximum of 2 guests allowed for Standard and Luxury Rooms.");
+        e.preventDefault();
+        return;
+    }
+
+    if (roomType === "family" && guests > 6) {
+
+        alert("Maximum of 6 guests allowed for Family Suite.");
+        e.preventDefault();
+        return;
+    }
+
+});
+
+function openDrawer() {
+    document
+    .getElementById("receipt-drawer")
+    .classList.add("show");
+}
+
+function closeDrawer() {
+    document
+    .getElementById("receipt-drawer")
+    .classList.remove("show");
+}
+
+</script>
+
+<div id="receipt-drawer" class="receipt-drawer">
+    <div class="drawer-content">
+
+        <h2>DMN HOTEL</h2>
+        <h3>Booking Receipt</h3>
+
+        <p id="guest"></p>
+        <p id="room"></p>
+        <p id="guests-count"></p>
+
+        <button onclick="closeDrawer()">Close</button>
+
+    </div>
+</div>
+
+</body>
+</html>

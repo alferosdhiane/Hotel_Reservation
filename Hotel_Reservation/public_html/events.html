@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DMN Hotel - Events</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Events</h1>
+</header>
+
+<nav>
+    <div class="nav-item">
+        <a href="index.html">Home</a>
+    </div>
+
+    <div class="nav-item">
+        <a href="rooms.html">Rooms</a>
+
+        <div class="drawer">
+            <p>View our luxary and standard rooms.</p>
+
+            <a href="lux-room.html">Luxury Rooms</a>
+            <a href="standard-rooms.html">Standard Rooms</a>
+            <a href="family-suites.html">Family Suites</a>
+        </div>
+    </div>
+
+
+    <div class="nav-item">
+        <a href="amenities.html">Amenities</a>
+
+        <div class="drawer">
+            <p>Check our pool, gym, and restaurant.</p>
+
+            <a href="swimming-pool.html">Swimming Pool</a>
+            <a href="fitness-center.html">Fitness Center</a>
+            <a href="restaurant.html">Restaurant</a>
+            <a href="spa-services.html">Spa Services</a>
+        </div>
+    </div>
+
+  
+    <div class="nav-item">
+        <a href="contact.html">Contact</a>
+        <div class="drawer">
+            <p>Reach us anytime for inquiries.</p>
+
+              <a href="contact.html#about">About Us</a>
+              <a href="contact.html#form">Contact Form</a>
+              <a href="contact.html#location">Location & Directions</a>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="nav-item">
+        <a href="events.html">Events</a>
+
+</nav>
+ <section class="events-intro">
+        <h2>Celebrate Your Special Moments</h2>
+        <p>
+            Make every occasion memorable at DMN Hotel. From elegant weddings
+            to intimate gatherings and professional meetings, our venues
+            provide the perfect setting for your special events.
+        </p>
+    </section>
+
+   
+    <section class="event-venues">
+        <h2>Our Event Venues</h2>
+        <p class="event-subtitle">
+            Discover the perfect venue for every occasion.
+        </p>
+
+        <div class="event-container">
+
+            
+            <div class="event-card" id="weddings">
+                <img src="images/wedding.jpg" alt="Wedding Venue">
+                <div class="event-card-content">
+                    <h3>Wedding Celebrations</h3>
+                    <p>
+                        Celebrate your special day in an elegant venue
+                        designed for beautiful and unforgettable weddings.
+                    </p>
+                    <p><strong>Capacity:</strong> 100–200 guests</p>
+                </div>
+            </div>
+
+         
+            <div class="event-card" id="birthdays">
+                <img src="images/birthday.jpg" alt="Birthday Celebration Venue">
+                <div class="event-card-content">
+                    <h3>Birthday Celebrations</h3>
+                    <p>
+                        Enjoy a joyful celebration with family and friends
+                        in a warm and welcoming space.
+                    </p>
+                    <p><strong>Capacity:</strong> 30–80 guests</p>
+                </div>
+            </div>
+
+           
+            <div class="event-card" id="special">
+                <img src="images/celebration.jpg" alt="Special Celebration Venue">
+                <div class="event-card-content">
+                    <h3>Special Celebrations</h3>
+                    <p>
+                        Perfect for anniversaries, graduations, reunions,
+                        and other meaningful occasions.
+                    </p>
+                    <p><strong>Capacity:</strong> 40–100 guests</p>
+                </div>
+            </div>
+
+           
+            <div class="event-card" id="corporate">
+                <img src="images/meeting.jpg" alt="Corporate Meeting Venue">
+                <div class="event-card-content">
+                    <h3>Corporate Meetings</h3>
+                    <p>
+                        A professional and comfortable space for business
+                        meetings, seminars, and conferences.
+                    </p>
+                    <p><strong>Capacity:</strong> 20–60 guests</p>
+                </div>
+            </div>
+
+            
+            <div class="event-card" id="dinners">
+                <img src="images/dinner.jpg" alt="Private Dinner Venue">
+                <div class="event-card-content">
+                    <h3>Private Dinners</h3>
+                    <p>
+                        Enjoy an intimate dining experience with your
+                        loved ones in a sophisticated setting.
+                    </p>
+                    <p><strong>Capacity:</strong> 10–30 guests</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    
+    <section class="event-reservation" id="reservation">
+
+        <h2>Reserve Your Event</h2>
+        <p>
+            Fill out the form below and let us help you plan
+            your special occasion at DMN Hotel.
+        </p>
+
+        <form class="event-form" id="event-form">
+
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname"
+                   placeholder="Enter your full name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter your email address" required>
+
+            <label for="contact">Contact Number</label>
+            <input type="tel" id="contact" name="contact"
+                   placeholder="Enter your contact number" required>
+
+            <label for="event-type">Event Type</label>
+            <select id="event-type" name="event_type" required>
+                <option value="">Select Event Type</option>
+                <option>Wedding Celebration</option>
+                <option>Birthday Celebration</option>
+                <option>Special Celebration</option>
+                <option>Corporate Meeting</option>
+                <option>Private Dinner</option>
+            </select>
+
+            <label for="event-date">Event Date</label>
+            <input type="date" id="event-date" name="event_date" required>
+
+            <label for="event-time">Event Time</label>
+            <input type="time" id="event-time" name="event_time" required>
+
+            <label for="guests">Number of Guests</label>
+            <input type="number" id="guests" name="guests"
+                   min="1" placeholder="Enter number of guests" required>
+
+            <label for="venue">Preferred Venue</label>
+            <select id="venue" name="venue" required>
+                <option value="">Select Preferred Venue</option>
+                <option>Grand Ballroom</option>
+                <option>Garden Hall</option>
+                <option>Function Room</option>
+                <option>Private Dining Room</option>
+                <option>Meeting Room</option>
+            </select>
+
+            <label for="catering">Catering Preferences</label>
+            <select id="catering" name="catering" required>
+                <option value="">Select Catering Preference</option>
+                <option>Buffet</option>
+                <option>Set Menu</option>
+                <option>Food and Drinks</option>
+                <option>No Catering Needed</option>
+                <option>Other / To Be Discussed</option>
+            </select>
+
+            <label for="requests">Special Requests</label>
+            <textarea id="requests" name="requests" rows="5"
+                      placeholder="Write your special requests here..."></textarea>
+
+            <button type="submit" class="event-submit">
+                Submit Reservation
+            </button>
+
+            <p id="event-status"></p>
+
+        </form>
+    </section>
+
+
+<footer>
+
+    <h3>DMN Hotel</h3>
+
+   
+    <p>Contact Information</p>
+    <p>Email: dmnhotel@gmail.com</p>
+    <p>Phone: +63 9638864331</p>
+    <p>Address: Ror</p>
+
+    <p>&copy; 2026 DMN Hotel. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>
