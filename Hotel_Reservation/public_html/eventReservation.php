@@ -248,10 +248,7 @@ echo "Receipt...";
 
     <br>
 
-    <p><strong>Reservation Status:</strong> Pending Confirmation</p>
-    <p style="text-align:center; color:#80634b;">
-        Thank you for choosing DMN Hotel!
-    </p>
+    <p><strong>Booking Status:</strong> Confirmed</p>
 
 </div>
 
@@ -261,7 +258,6 @@ echo "Receipt...";
 
 </body>
 </html>
-
 
 
 
